@@ -1,0 +1,97 @@
+
+b
+java:S1192×"KDefine a constant instead of duplicating this literal "User-Agent" 4 times.(…‰Ğˆ
+a
+java:S1192Ì"JDefine a constant instead of duplicating this literal "function " 3 times.(ï¡½Ì
+b
+java:S1192Ï"FDefine a constant instead of duplicating this literal "UTF-8" 7 times.(ìƒ‘ıÿÿÿÿ
+8
+java:S1643Ø"Use a StringBuilder instead.(Öëâòüÿÿÿÿ
+8
+java:S1643í"Use a StringBuilder instead.(ª²Ğ¹ùÿÿÿÿ
+8
+java:S1643€"Use a StringBuilder instead.(¶ªœèùÿÿÿÿ
+s	java:S127Ü"XRefactor the code in order to not assign to this loop counter from within the loop body.(Øı•ùøÿÿÿÿ
+m	java:S127Ş"XRefactor the code in order to not assign to this loop counter from within the loop body.(ïëóC
+s	java:S127ñ"XRefactor the code in order to not assign to this loop counter from within the loop body.(Øı•ùøÿÿÿÿ
+m	java:S127ó"XRefactor the code in order to not assign to this loop counter from within the loop body.(ïëóC
+s	java:S127„"XRefactor the code in order to not assign to this loop counter from within the loop body.(Øı•ùøÿÿÿÿ
+m	java:S127†"XRefactor the code in order to not assign to this loop counter from within the loop body.(ïëóC
+t	java:S135Ê"YReduce the total number of break and continue statements in this loop to use at most one.(úû›Êùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øï”ÿÿÿÿÿ
+?
+java:S1148Ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148É"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148Ï"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148ù"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1148ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+m
+java:S3008$"RRename this field "LOGGING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¿Ì«ûÿÿÿÿ
+`
+java:S1124""EReorder the modifiers to comply with the Java Language Specification.(È€‹•ùÿÿÿÿ
+`
+java:S1124&"EReorder the modifiers to comply with the Java Language Specification.(€´åúÿÿÿÿ
+[
+java:S1124'"EReorder the modifiers to comply with the Java Language Specification.(ÅŸ™†
+i
+java:S3776Ë"RRefactor this method to reduce its Cognitive Complexity from 90 to the 15 allowed.(‰ä­‚
+D
+java:S1659‘"(Declare "statusFail" on a separate line.(€Î¸Çøÿÿÿÿ
+F
+java:S2093Ø"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+F
+java:S2093ó"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+F
+java:S2093§"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+R
+java:S2696º"6Make the enclosing method "static" or remove this set.(ÌÍçÏÿÿÿÿÿ
+R
+java:S2696»"6Make the enclosing method "static" or remove this set.(÷ÉÅÕÿÿÿÿÿ
+R
+java:S2696½"6Make the enclosing method "static" or remove this set.(¢²í±ıÿÿÿÿ
+U	java:S899†":Do something with the "boolean" value returned by "await".(ƒÏ—úÿÿÿÿ
+W
+java:S2274†";Remove this call to "await" or move it into a "while" loop.(ƒÏ—úÿÿÿÿ
+i
+java:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 87 to the 15 allowed.(†ğ±ù
+F
+java:S2093¬"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+R
+java:S2696¿"6Make the enclosing method "static" or remove this set.(©Í±·üÿÿÿÿ
+R
+java:S2696à"6Make the enclosing method "static" or remove this set.(ùô¥¬ûÿÿÿÿ
+R
+java:S2696í"6Make the enclosing method "static" or remove this set.(ª²Ğ¹ùÿÿÿÿ
+R
+java:S2696€"6Make the enclosing method "static" or remove this set.(¶ªœèùÿÿÿÿ
+@
+java:S1659›"$Declare "author" on a separate line.(Îéäıÿÿÿÿ
+C
+java:S1659›"'Declare "channelId" on a separate line.(Îéäıÿÿÿÿ
+G
+java:S1659›"+Declare "shortDescript" on a separate line.(Îéäıÿÿÿÿ
+;
+java:S1659œ"$Declare "length" on a separate line.(í‚Ü
+=
+java:S1075¿"&Remove this hard-coded path-delimiter.(ã„ëì
+P
+java:S4719Ä"9Replace charset name argument with StandardCharsets.UTF_8(´ÓÖˆ
+M
+java:S2696Å"6Make the enclosing method "static" or remove this set.(¥ŸÙ…
+L
+java:S2696Æ"6Make the enclosing method "static" or remove this set.(ßè«!
+R
+java:S2696Ç"6Make the enclosing method "static" or remove this set.(–Ç‡àıÿÿÿÿ
+F
+java:S2093Ã"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+=
+java:S1075ñ"&Remove this hard-coded path-delimiter.(ã„ëì
+P
+java:S4719ô"9Replace charset name argument with StandardCharsets.UTF_8(””åª
+F
+java:S2093ó"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+W	java:S125¬"<This block of commented-out lines of code should be removed.(ç Ïşÿÿÿÿ

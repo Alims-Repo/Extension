@@ -1,0 +1,2 @@
+rootProject.name='Extension'
+include ':app'

@@ -1,0 +1,13 @@
+
+V	java:S1076"AConstructor has 8 parameters, which is greater than 7 authorized.(·îóö
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Øï”ÿÿÿÿÿ
+A
+java:S1172"&Remove these unused method parameters.(æ€Ïúÿÿÿÿ
+A
+java:S1172!"&Remove these unused method parameters.(È²–ùÿÿÿÿ
+<
+java:S1172+"&Remove these unused method parameters.(·îóö
+<
+java:S11726"&Remove these unused method parameters.(·îóö
+A
+java:S1172A"&Remove these unused method parameters.(¨±½™øÿÿÿÿ
