@@ -1,8 +1,13 @@
 
-N
-java:S1128"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8áË“†¥.
-œ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¤œî¢þÿÿÿÿ
+v
+java:S1192<"TDefine a constant instead of duplicating this literal "com.alim.snaploader" 3 times.(ÑéŸÂûÿÿÿÿ8ÉýÎ¨¥.
 M
-java:S1135"2Complete the task associated to this TODO comment.(Ú¦Ÿšûÿÿÿÿ
-y	java:S127%"XRefactor the code in order to not assign to this loop counter from within the loop body.( «™Ëÿÿÿÿÿ8Ë¹…¥.
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8 ½’ª¥.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¤œî¢þÿÿÿÿ8ÌØú¦¥.
+Œ
+java:S1192<"jDefine a constant instead of duplicating this literal "com.alim.snaploader.Reciever.LinkReceiver" 3 times.(ÑéŸÂûÿÿÿÿ8ÉýÎ¨¥.
+y	java:S1276"XRefactor the code in order to not assign to this loop counter from within the loop body.( «™Ëÿÿÿÿÿ8¼ˆ…©¥.
+]	java:S125V"<This block of commented-out lines of code should be removed.(êú“Æøÿÿÿÿ8ÉýÎ¨¥.
+T
+java:S1135 "2Complete the task associated to this TODO comment.(Ú¦Ÿšûÿÿÿÿ8ÌØú¦¥.

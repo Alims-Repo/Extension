@@ -8,8 +8,8 @@ android {
         applicationId "com.alim.extension"
         minSdkVersion 22
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.9.5 Beta"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -20,7 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -29,4 +28,9 @@ dependencies {
     implementation('com.github.evgenyneu:js-evaluator-for-android:v4.0.0') {
         exclude module: 'appcompat-v7'
     }
+
+    /*implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.2'
+    implementation 'com.facebook.stetho:stetho-js-rhino:1.5.1'
+    implementation 'com.github.Commit451:YouTubeExtractor:6.0.0'*/
 }
