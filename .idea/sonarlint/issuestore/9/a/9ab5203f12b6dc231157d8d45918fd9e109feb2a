@@ -1,13 +1,6 @@
 
-v
-java:S1192<"TDefine a constant instead of duplicating this literal "com.alim.snaploader" 3 times.(ÑéŸÂûÿÿÿÿ8ÉıÎ¨¥.
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8 ½’ª¥.
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¤œî¢şÿÿÿÿ8ÌØú¦¥.
-Œ
-java:S1192<"jDefine a constant instead of duplicating this literal "com.alim.snaploader.Reciever.LinkReceiver" 3 times.(ÑéŸÂûÿÿÿÿ8ÉıÎ¨¥.
-y	java:S1276"XRefactor the code in order to not assign to this loop counter from within the loop body.( «™Ëÿÿÿÿÿ8¼ˆ…©¥.
-]	java:S125V"<This block of commented-out lines of code should be removed.(êú“Æøÿÿÿÿ8ÉıÎ¨¥.
+y	java:S127'"XRefactor the code in order to not assign to this loop counter from within the loop body.( «™Ëÿÿÿÿÿ8é•Í¥.
 T
-java:S1135 "2Complete the task associated to this TODO comment.(Ú¦Ÿšûÿÿÿÿ8ÌØú¦¥.
+java:S1135"2Complete the task associated to this TODO comment.(Ú¦Ÿšûÿÿÿÿ8¯Ì›®¥.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¤œî¢şÿÿÿÿ8¯Ì›®¥.

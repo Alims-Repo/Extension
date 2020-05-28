@@ -54,7 +54,8 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
     private final Lock lock = new ReentrantLock();
     private final Condition jsExecuting = lock.newCondition();
 
-    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36";
+    //private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36";
+    private static final  String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0";
 
     private static final Pattern patYouTubePageLink = Pattern.compile("(http|https)://(www\\.|m.|)youtube\\.com/watch\\?v=(.+?)( |\\z|&)");
     private static final Pattern patYouTubeShortLink = Pattern.compile("(http|https)://(www\\.|)youtu.be/(.+?)( |\\z|&)");
@@ -165,6 +166,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
      */
     public void extract(String youtubeLink, boolean parseDashManifest, boolean includeWebM) {
         this.includeWebM = includeWebM;
+        this.setParseDashManifest(parseDashManifest);
         this.execute(youtubeLink);
     }
 
@@ -206,6 +208,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
         ytInfoUrl += "www.youtube.com/get_video_info?video_id=" + videoID + "&eurl="
                 + URLEncoder.encode("https://youtube.googleapis.com/v/" + videoID, "UTF-8");
 
+        Log.println(Log.ASSERT,"URL",ytInfoUrl);
         String streamMap;
         BufferedReader reader = null;
         URL getUrl = new URL(ytInfoUrl);
@@ -216,7 +219,6 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
         try {
             reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
             streamMap = reader.readLine();
-
         } finally {
             if (reader != null)
                 reader.close();
@@ -270,7 +272,8 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
 
         // "use_cipher_signature" disappeared, we check whether at least one ciphered signature
         // exists int the stream_map.
-        boolean sigEnc = true, statusFail = false;
+        boolean sigEnc = true;
+        boolean statusFail = false;
         if(!patCipher.matcher(streamMap).find()) {
             sigEnc = false;
             if (!patStatusOk.matcher(streamMap).find()) {
@@ -282,6 +285,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
         // deciphering js-file from the youtubepage.
         if (sigEnc || statusFail) {
             // Get the video directly from the youtubepage
+            Log.println(Log.ASSERT,"FAIL", "DONE");
             if (CACHING
                     && (decipherJsFileName == null || decipherFunctions == null || decipherFunctionName == null)) {
                 readDecipherFunctFromCache();
@@ -293,11 +297,11 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
             urlConnection = (HttpURLConnection) getUrl.openConnection();
             urlConnection.setRequestProperty("User-Agent", USER_AGENT);
             try {
+                Log.println(Log.ASSERT,"TRY", "DONE");
                 reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
                 String line;
                 StringBuilder sbStreamMap = new StringBuilder();
                 while ((line = reader.readLine()) != null) {
-                    // Log.d("line", line);
                     sbStreamMap.append(line.replace("\\\"", "\""));
                 }
                 streamMap = sbStreamMap.toString();
@@ -356,7 +360,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
 
             if (FORMAT_MAP.get(itag) == null) {
                 if (LOGGING)
-                    Log.d(LOG_TAG, "Itag not in list:" + itag);
+                    Log.println(Log.ASSERT,"LOG", "Itag not in list:" + itag);
                 continue;
             } else if (!includeWebM && FORMAT_MAP.get(itag).getExt().equals("webm")) {
                 continue;
@@ -367,7 +371,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
                 continue;
 
             if (LOGGING)
-                Log.d(LOG_TAG, "Itag found:" + itag);
+                Log.println(Log.ASSERT,"LOG", "Itag found:" + itag);
 
             if (sig != null) {
                 encSignatures.append(itag, sig);
@@ -412,6 +416,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
                 Log.d(LOG_TAG, streamMap);
             return null;
         }
+        Log.println(Log.ASSERT,"LOG", ytFiles.toString());
         return ytFiles;
     }
 
@@ -683,7 +688,7 @@ public abstract class YouTubeExtractor extends AsyncTask<String, Void, SparseArr
                         lock.lock();
                         try {
                             if(LOGGING)
-                                Log.e(LOG_TAG, errorMessage);
+                                Log.println(Log.ASSERT,"ERROR", errorMessage);
                             jsExecuting.signal();
                         } finally {
                             lock.unlock();
